@@ -8,3 +8,6 @@ var path = '../../../src/app/javascript/utils/';
 
 require('./testUtils/createBoard.js')(assert,path);
 
+require('./testUtils/renderBoard.js')(assert,path);
+
+

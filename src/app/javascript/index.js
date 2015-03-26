@@ -1,9 +1,12 @@
-(function (){
-	console.log('testing');
+$(function (){
 
-})();
+	var board = require('./utils/createBoard.js')();
+	var table = require('./utils/renderBoard.js')(board);
 
-var makeBoad = require('./utils/createBoard.js');
+	$('#container').append(table);
+
+});
+
 
 
 
