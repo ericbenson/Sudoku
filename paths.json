@@ -3,9 +3,9 @@
   "client": {
     "root": "src/",
     "app": "src/app",
-    "index": "src/index.html",
+    "index": "src/index.jade",
     "js": "src/app/javascript/*.js",
-    "css": "src/app/styles/*.css"
+    "css": "src/app/styles/*.sass"
   },
   "vendor": {
     "root": "build/vendor",
