@@ -31,10 +31,11 @@ gulp
 Open index.html in browser 
 
 ## Structure and Technologies Used
-  -
+  - Used Jade and Sass for html templating and styling
+  - Mocha and Chai for testing
 
 ## Reasoning for Technical Choices Made
   -
-  
+
 ## Changes to be Implemented with More Time
   -

@@ -46,5 +46,11 @@
                  'watch:dev'
                  ));
 
+  gulp
+    .task('mocha' ,tasks.mocha.dev)
+    .task('test'  ,
+      $.sequence('mocha'
+                ));
+
 
 })();

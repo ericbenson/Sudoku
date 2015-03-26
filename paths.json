@@ -4,7 +4,8 @@
     "root": "src/",
     "app": "src/app",
     "index": "src/index.jade",
-    "js": "src/app/javascript/*.js",
+    "alljs": "src/app/javascript/**/*.js",
+    "js": "src/app/javascript/index.js",
     "css": "src/app/styles/*.sass"
   },
   "vendor": {
@@ -33,10 +34,7 @@
     }
   },
   "tests": {
-    "integration": "test/integration/integration.js",
-    "server": "test/unit/server.js",
-    "client": "test/unit/client.js",
-    "jsx": "test/unit/jsxComponents/*.js",
+    "client": "tests/unit/client.js",
     "karma" : "karma.conf.js", 
     "testFiles": "['src/client/app/core/*.js', 'test/unit/client.js']"
   }  
