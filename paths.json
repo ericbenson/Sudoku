@@ -1,0 +1,43 @@
+{
+  "root": "",
+  "client": {
+    "root": "src/",
+    "app": "src/app",
+    "index": "src/index.html",
+    "js": "src/app/javascript/*.js",
+    "css": "src/app/styles/*.css"
+  },
+  "vendor": {
+    "root": "build/vendor",
+    "all": "build/vendor/**/*",
+    "js": "build/vendor/js/**/*",
+    "css": "build/vendor/css/**/*",
+    "fonts": "build/vendor/fonts/**/*",
+    "dir": {
+      "js": "build/vendor/js",
+      "css": "build/vendor/css",
+      "fonts": "build/vendor/fonts"
+    }
+  },
+  "build": {
+    "root": "build",
+    "all": "build/**/*",
+    "index": "build/index.html",
+    "js": "build/js/*.js",
+    "css": "build/css/*.css",
+    "vendor": "build/vendor/**/*",
+    "dir": {
+      "js": "build/js",
+      "css": "build/css",
+      "vendor": "build/vendor"
+    }
+  },
+  "tests": {
+    "integration": "test/integration/integration.js",
+    "server": "test/unit/server.js",
+    "client": "test/unit/client.js",
+    "jsx": "test/unit/jsxComponents/*.js",
+    "karma" : "karma.conf.js", 
+    "testFiles": "['src/client/app/core/*.js', 'test/unit/client.js']"
+  }  
+}
