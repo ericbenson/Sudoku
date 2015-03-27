@@ -1,3 +1,5 @@
+var listener = require('./cellListener.js');
+
 module.exports = function(board){
 
   //creates a table and appends the rows and columns from the board to the table
@@ -13,7 +15,7 @@ module.exports = function(board){
 
     for(var j=0; j<9; j+=3){
       var tableCol = $('<td></td>'); 
-      var section = $('<table></table>');
+      var section = $('<table></table>').addClass('section');
       
 
       //creates the inner tables for each of the 9 sections of the board
@@ -24,10 +26,8 @@ module.exports = function(board){
           if(board[r][c]){
             sectionCol.append(board[r][c]).addClass('permanent'); 
           } else {
-            var button = $('<button></button').text('Enter').addClass(''+r+':'+c);
-            button.click(function(){
-              console.log($(this).attr('class'));
-            })
+            var button = $('<button></button').text('Edit').addClass(''+r+':'+c);
+            button.click(listener);
             sectionCol.append(button).addClass('changeable');
           }
           sectionRow.append(sectionCol);
