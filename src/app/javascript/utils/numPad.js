@@ -1,9 +1,9 @@
 var listener = require('./numPadListener.js');
 
-module.exports = function(cell, parent, table){
+module.exports = function(cell, parent, table, board){
 
-  clickListener = function(){
-  	listener.call(this,cell, parent, table);
+  var clickListener = function(){
+  	listener.call(this,cell, parent, table, board);
   };
 
   var numPad = $('<table></table>');
