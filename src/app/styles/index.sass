@@ -1,30 +1,45 @@
 $font-stack:    Helvetica, sans-serif;
-$primary-color: #999;
+$primary-color: #80C332;
+$table-color: #22857B;
+$border-color: #D77B37;
 
 body {
   font: 100% $font-stack;
   background-color: $primary-color;
 }
 
-table {
-  float:left;
+@mixin table-attributes {
   padding: 5px;
-  border: 5px solid navy;
-  margin: 0px;	
+  border: 5px solid $border-color;
+  margin: 0px;
+  background-color: $table-color;	
 }
 
-td {
-  width: 200px;
-  padding: 0px;
-  border: 1px solid black;
-  margin: 0px;		
+.board{
+  @include table-attributes;
+  width: 100%;
+  max-width: 800px;
+}
+
+.section {
+  @include table-attributes;
+  width: 100%;
 }
 
 button {
   width: 100%;
 }
 
+td {
+  width: 33%;
+  padding: 0px;
+  border: 1px solid black;
+  margin: 0px;    
+}
+
+
 .numPad{
+  height: 100%;
   padding: 2px;
   border: 2px solid black;
   margin: 0px;    
@@ -35,4 +50,35 @@ button {
   padding: 0px;
   border: 1px solid black;
   margin: 0px;      
+}
+
+.permanent {
+  background-color: $border-color;
+  font-size: 100%;
+  text-align: center;
+}
+
+@mixin button-size{
+  width: 100%;
+  max-width: 300px;
+  font-size: 100%;
+}
+
+.submit{
+  @include button-size;
+
+}
+
+.incorrect{
+  @include button-size; 
+  background-color: red;
+}
+
+.winner{
+  @include button-size;
+  backgorund-color: green;
+}
+
+.restart{
+  @include button-size; 
 }

@@ -1,4 +1,4 @@
-var listener = require('./cellListener.js');
+var listener = require('../cell/cellListener.js');
 
 module.exports = function(board){
 

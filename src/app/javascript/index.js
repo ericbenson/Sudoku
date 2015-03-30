@@ -1,13 +1,24 @@
 $(function (){
 
-	var board = require('./utils/createBoard.js')();
-	var table = require('./utils/renderBoard.js')(board);
-	var numPad = require('./utils/numPad.js')();
-	var submit = require('./utils/submitAnswer.js')(board);
+	var restartButton = require('./utils/restart/reset.js');
 
-	$('#container').append(table);
+	var reset = function(){
+		$('#container').children().detach();
 
-	$('#container').append(submit);
+		var board = require('./utils/board/createBoard.js')();
+		var table = require('./utils/board/renderBoard.js')(board);
+		var submit = require('./utils/solution/submitAnswer.js')(board);
+
+		$('#container').append(table);
+
+		$('#container').append(submit);
+		
+	};
+	reset();
+
+	restartButton.click(reset);
+	
+	$('#restart').append(restartButton);
 
 
 
