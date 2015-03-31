@@ -1,7 +1,7 @@
 module.exports = function(assert, path){
   describe('createBoard', function() {
 
-    var board = require(path+'createBoard')();
+    var board = require(path+'board/createBoard')();
 
     it("board is an Array", function () {
       assert.isArray(board);

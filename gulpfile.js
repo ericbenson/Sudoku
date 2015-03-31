@@ -48,7 +48,7 @@
 
   gulp
     .task('mocha' ,tasks.mocha.dev)
-    .task('karma' ,tasks.karma.dev)
+    // .task('karma' ,tasks.karma.dev)
     .task('test'  ,
       $.sequence('mocha',
                  'karma'

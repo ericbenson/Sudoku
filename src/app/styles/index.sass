@@ -8,26 +8,32 @@ body {
   background-color: $primary-color;
 }
 
+h1 {
+  text-indent: 3%;
+}
+
 @mixin table-attributes {
   padding: 5px;
   border: 5px solid $border-color;
   margin: 0px;
-  background-color: $table-color;	
+  background-color: $table-color;
+  width: 100%;	
 }
 
 .board{
   @include table-attributes;
-  width: 100%;
   max-width: 800px;
 }
 
 .section {
   @include table-attributes;
-  width: 100%;
 }
 
 button {
   width: 100%;
+}
+button:hover{
+  background-color: yellow;
 }
 
 td {
@@ -37,12 +43,11 @@ td {
   margin: 0px;    
 }
 
-
 .numPad{
-  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
   padding: 2px;
-  border: 2px solid black;
-  margin: 0px;    
+  border: 2px solid black; 
 }
 
 .numPadDigit{
@@ -74,9 +79,17 @@ td {
   background-color: red;
 }
 
+.incorrect:hover{
+  background-color: red;
+}
+
 .winner{
   @include button-size;
   backgorund-color: green;
+}
+
+.winner:hover{
+  background-color: green;
 }
 
 .restart{

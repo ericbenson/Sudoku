@@ -6,10 +6,11 @@ module.exports = function(cell, parent, table, board){
   	listener.call(this,cell, parent, table, board);
   };
 
+  //creates the table to hold the num pad
   var numPad = $('<table></table>');
   numPad.addClass('numPad');
 
-  //creates the outer table to house the 9 inner sections of the board
+  //creates the num pad using nested for loops
   for(var i=1; i<10; i+=3){
     var tableRow = $('<tr></tr>'); 
 

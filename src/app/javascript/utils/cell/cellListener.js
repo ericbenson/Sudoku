@@ -6,5 +6,4 @@ module.exports = function(board){
   var numPad = require('../numpad/numPad.js')(cell, parent, table, board);
   table.detach();
   parent.append(numPad);
-  console.log(cell.attr('class'));
 }
